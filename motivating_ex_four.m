@@ -210,7 +210,7 @@ alpha = 25;
 C_opt = 1;
 
 xopt0 = zeros(max(size(C_opt)),1);
-nnn
+
 %% saturation limits
 
 % u_max1 = [0.75;1.25];
@@ -483,10 +483,10 @@ hold off;
 
 figure()
 hold on; grid on;
-p1 = plot(r1_sat(:,1),r1_sat(:,2));
-p2 = plot(r2_sat(:,1),r2_sat(:,2));
-p3 = plot(r3_sat(:,1),r3_sat(:,2));
-p4 = plot(r4_sat(:,1),r4_sat(:,2));
+p1 = plot(r1_sat(:,1),r1_sat(:,2),'linewidth',2);
+p2 = plot(r2_sat(:,1),r2_sat(:,2),'linewidth',2);
+p3 = plot(r3_sat(:,1),r3_sat(:,2),'linewidth',2);
+p4 = plot(r4_sat(:,1),r4_sat(:,2),'linewidth',2);
 plot(r1_sat(end,1),r1_sat(end,2),'o','linewidth',2);
 plot(r2_sat(end,1),r2_sat(end,2),'o','linewidth',2);
 plot(r3_sat(end,1),r3_sat(end,2),'o','linewidth',2);
@@ -494,8 +494,9 @@ plot(r4_sat(end,1),r4_sat(end,2),'o','linewidth',2);
 % line([-4,2],[-12,6],'linewidth',1.5)
 ylabel("$y$",'interpreter','latex')
 xlabel("$x$",'interpreter','latex')
-legend([p1,p2,p3,p4],'r1','r2','r3','r4','location','nw');
-%saveas(gcf,'./dec/platoon_sat_traj.eps','epsc')
+legend([p1,p2,p3,p4],'$r_1$','$r_2$','$r_3$','$r_4$','location','nw','interpreter','latex');
+set(gca,'FontSize',16)
+saveas(gcf,'./dec/platoon_sat_traj.eps','epsc')
 
 figure()
 
@@ -569,10 +570,10 @@ hold off;
 % trajectory
 figure()
 hold on; grid on;
-p1 = plot(r1_dead(:,1),r1_dead(:,2));
-p2 = plot(r2_dead(:,1),r2_dead(:,2));
-p3 = plot(r3_dead(:,1),r3_dead(:,2));
-p4 = plot(r4_dead(:,1),r4_dead(:,2));
+p1 = plot(r1_dead(:,1),r1_dead(:,2),'linewidth',2);
+p2 = plot(r2_dead(:,1),r2_dead(:,2),'linewidth',2);
+p3 = plot(r3_dead(:,1),r3_dead(:,2),'linewidth',2);
+p4 = plot(r4_dead(:,1),r4_dead(:,2),'linewidth',2);
 plot(r1_dead(end,1),r1_dead(end,2),'o','linewidth',2);
 plot(r2_dead(end,1),r2_dead(end,2),'o','linewidth',2);
 plot(r3_dead(end,1),r3_dead(end,2),'o','linewidth',2);
@@ -583,8 +584,9 @@ ylim([-4,12]);
 ylabel("$y$",'interpreter','latex')
 xlabel("$x$",'interpreter','latex')
 %title('all dead')
-legend([p1,p2,p3,p4],'r1','r2','r3','r4','location','nw');
-%saveas(gcf,'./dec/platoon_dead_traj.eps','epsc')
+legend([p1,p2,p3,p4],'$r_1$','$r_2$','$r_3$','$r_4$','location','nw','interpreter','latex');
+set(gca,'FontSize',16)
+saveas(gcf,'./dec/platoon_dead_traj.eps','epsc')
 
 % total control
 figure()

@@ -16,6 +16,9 @@ addpath('/home/lorenzo/Documents/MATLAB/YALMIP-master/operators');
 
 addpath('/home/lorenzo/Documents/MATLAB/sedumi-master');
 
+addpath('/opt/gurobi1103/linux64/matlab')
+savepath
+
 %% Communication graph and clusterization
 
 % adjacency matrix
@@ -214,7 +217,7 @@ n_max = [n1_max,n2_max,n3_max];
 
 % Allocation
 
-[Z1_task, Delta] = Task_All_new(nr,Pi,alpha,nt,R,delta,F,T,n_min,n_max,p,c,l,M);
+[Z1_task, Delta, elapsed] = Task_All_new(nr,Pi,alpha,nt,R,delta,F,T,n_min,n_max,p,c,l,M);
 
 disp('Task t1 has been assigned to:')
 idx1 = find(Z1_task(1,:));
@@ -227,6 +230,8 @@ cc{idx2}
 disp('Task t3 has been assigned to:')
 idx3 = find(Z1_task(3,:));
 cc{idx3}
+
+disp(['The allocation took: ',num2str(elapsed),' seconds'])
 
 %% Task execution
 

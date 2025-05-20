@@ -1,6 +1,6 @@
-function [z,d] = Task_All_new(nr,Pi,alpha,nt,R,delta,F,T,n_min,n_max,p,c,l,M)
+function [z,d,elapsed] = Task_All_new(nr,Pi,alpha,nt,R,delta,F,T,n_min,n_max,p,c,l,M)
 
-ops = sdpsettings('verbose',0);
+ops = sdpsettings('verbose',0,'solver','gurobi');
 
 cost1 = 0;
 cost2 = 0;
@@ -64,7 +64,9 @@ obj = c*cost1 + l*cost2 + 0.5*norm(delta)^2;
 
 % YALMIP
 
+tic;
 optimize(cons_vec,obj,ops);
+elapsed = toc;
 
 d = value(delta);
 

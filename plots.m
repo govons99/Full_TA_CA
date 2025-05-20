@@ -67,7 +67,7 @@ xlabel("$Time [s]$",'interpreter','latex')
 set(gca,'FontSize',12)
 hold off;
 
-%saveas(gcf,'./simulation_figures/t1_control.eps','epsc')
+%%saveas(gcf,'./simulation_figures/t1_control.eps','epsc')
 
 % second task
 
@@ -135,7 +135,7 @@ xlabel("$Time [s]$",'interpreter','latex')
 set(gca,'FontSize',12)
 hold off;
 
-%saveas(gcf,'./simulation_figures/t2_control.eps','epsc')
+%%saveas(gcf,'./simulation_figures/t2_control.eps','epsc')
 
 % third task
 
@@ -202,7 +202,7 @@ xlabel("$Time [s]$",'interpreter','latex')
 set(gca,'FontSize',12)
 hold off;
 
-%saveas(gcf,'./simulation_figures/t3_control.eps','epsc')
+%%saveas(gcf,'./simulation_figures/t3_control.eps','epsc')
 
 %% error plots
 
@@ -274,7 +274,7 @@ ylabel("$e_y$",'interpreter','latex')
 set(gca,'FontSize',12)
 hold off;
 
-%saveas(gcf,'./simulation_figures/t1_error.eps','epsc')
+%%saveas(gcf,'./simulation_figures/t1_error.eps','epsc')
 
 % second task
 
@@ -345,7 +345,7 @@ ylabel("$e_y$",'interpreter','latex')
 set(gca,'FontSize',12)
 hold off;
 
-%saveas(gcf,'./simulation_figures/t2_error.eps','epsc')
+%%saveas(gcf,'./simulation_figures/t2_error.eps','epsc')
 
 % third task
 
@@ -415,7 +415,7 @@ ylabel("$e_y$",'interpreter','latex')
 set(gca,'FontSize',12)
 hold off;
 
-%saveas(gcf,'./simulation_figures/t3_error.eps','epsc')
+%%saveas(gcf,'./simulation_figures/t3_error.eps','epsc')
 
 %% trajectory plots
 
@@ -477,7 +477,7 @@ line([x_nom_t2(2, end) x_nom_t2(4, end)], [y_nom_t2(2, end) y_nom_t2(4, end)], '
 axis equal
 legend(leg,"$$r_1$$","$$r_2$$","$$r_3$$","$$r_4$$","$$r_5$$","$$r_6$$","$$r_7$$","$$r_8$$","$$r_9$$","$$r_{10}$$", ...
     'location','northoutside','numcolumns',5,'interpreter','latex','fontsize',13);
-saveas(gcf,'./simulation_figures/nom_traj.eps','epsc')
+%saveas(gcf,'./simulation_figures/nom_traj.eps','epsc')
 
 figure()
 hold on; grid on;
@@ -518,7 +518,7 @@ line([x_sat_t2(2, end) x_sat_t2(4, end)], [y_sat_t2(2, end) y_sat_t2(4, end)], '
 axis equal
 legend(leg,"$$r_1$$","$$r_2$$","$$r_3$$","$$r_4$$","$$r_5$$","$$r_6$$","$$r_7$$","$$r_8$$","$$r_9$$","$$r_{10}$$", ...
     'location','northoutside','numcolumns',5,'interpreter','latex','fontsize',13);
-saveas(gcf,'./simulation_figures/sat_traj.eps','epsc')
+%saveas(gcf,'./simulation_figures/sat_traj.eps','epsc')
 
 figure()
 hold on; grid on;
@@ -559,4 +559,4 @@ line([x_dead_t2(2, end) x_dead_t2(4, end)], [y_dead_t2(2, end) y_dead_t2(4, end)
 axis equal
 legend(leg,"$$r_1$$","$$r_2$$","$$r_3$$","$$r_4$$","$$r_5$$","$$r_6$$","$$r_7$$","$$r_8$$","$$r_9$$","$$r_{10}$$", ...
     'location','northoutside','numcolumns',5,'interpreter','latex','fontsize',13);
-saveas(gcf,'./simulation_figures/dead_traj.eps','epsc')
+%saveas(gcf,'./simulation_figures/dead_traj.eps','epsc')
